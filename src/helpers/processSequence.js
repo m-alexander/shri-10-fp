@@ -22,7 +22,7 @@ const api = new Api();
 
 const processSequence = ({value, writeLog, handleSuccess, handleError}) => {
 
-    const validationError = handleError('ValidationError')
+    const validationError = () => handleError('ValidationError')
     const convertNumber = number => api.get('https://api.tech/numbers/base', {from: 10, to: 2, number})
     const getAnimal = number => api.get(`https://animals.tech/${number}`, {})
 
